@@ -8,9 +8,17 @@
 </head>
 <body>
     <h1>My Contact infomation</h1>
-    <ul>
-        <li>phone: 07-6110246 #257</li>
-        <li>email: hsh319ab@gmail.com</li>
-    </ul>
+    <p>phone: 07-6110246 #257</p>
+    <p>email: hsh319ab@gmail.com</p>
+    <hr>
+    <form action="mailto:hsh319ab@gmail.com" method="post" enctype="text/plain">
+        <label>Your Name:</label>
+        <input type="text" name="yourName" value=""><br>
+        <label>Your Email:</label>
+        <input type="email" name="yourEmail" value=""><br>
+        <label>Your Message:</label><br>
+        <textarea name = "yourMessage" rows = "10" cols="30"></textarea><br>
+        <input type="submit" name="">
+    </form>
 </body>
 </html>
