@@ -57,3 +57,9 @@
     </div>
 </div>
 ```
+
+## some topic when writing html or css code
+1. do not using style on html element
+2. do not use many id in the html element, using classs instead.
+3. use only one class in one element
+4. priority: html nested style > id > class > html element
