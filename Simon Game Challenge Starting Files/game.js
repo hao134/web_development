@@ -27,7 +27,6 @@ $(".btn").click(function() {
     checkAnswer(userClickedPattern.length -1);
 });
 
-
 function checkAnswer(currentLevel){
     
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
@@ -41,21 +40,17 @@ function checkAnswer(currentLevel){
     } else {
         console.log("wrong");
 
-        //1. In the sounds folder, there is a sound called wrong.mp3, play this if the user 
-        // got one of the answers wrong.
         playSound("wrong");
 
-        //2. In the styles.css file, there is a class called "game-over", apply this class to 
-        // the body of the website when the user gets one of the answers wrong and then remove
-        // it after 200 milliseconds.
         $('body').addClass("game-over");
         setTimeout(function(){
             $('body').removeClass("game-over");
         }, 200)
 
-        //3. change the h1 title to say "Game Over, Press Any Key to Restart" if the user got
-        // the answer wrong.
         $('#level-title').text("Game Over, Press Any Key to Restar.");
+
+        //2. Call startOver() if the user gets the sequence wrong.
+        startOver();
     }
 }
 
@@ -87,8 +82,11 @@ function animatePress(currentColour) {
     }, 100);
 }
 
+//1. Create a new function called startOver().
+function startOver(){
 
-
-// $(document).keypress(function(){
-//     nextSequence();
-// });
+    //3. Inside this function, you'll need to reset the values of level, gamePattern and started variables.
+    gamePattern = [];
+    level = 0;
+    started = false;
+}
