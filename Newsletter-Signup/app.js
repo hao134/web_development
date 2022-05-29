@@ -41,7 +41,7 @@ app.post('/', function(req, res) {
  
   const options = {
     method: "POST",
-    auth: "shihhao:8d4818c25728cea8aa17d6d31f740c1f-us10"
+    auth: "shihhao:YOUR_API_KEY"
   }
  
   const request = https.request(url, options, function(response) {
