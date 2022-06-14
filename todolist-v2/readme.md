@@ -128,3 +128,39 @@ app.post("/", function (req, res) {
   }
 });
 ```
+
+- 在客製化頁面刪除條目：
+  原本的問題是當在客製化頁面刪除條目時，會回到原本頁面的條目，因此要在客製化頁面刪除條目，首先要在 list.ejs 上傳遞 listname，也就是客製化頁面的名目，這樣才知道要刪掉何客製化條目
+  也就是在 delete form 中，加上：
+
+```
+<input type="hidden" name="listName" value="<%= listTitle %>"></input>
+```
+
+根據 mongodb documents 描述：The $pull operator removes from an existing array all instances of a value that match a specified condition， 因此在下方寫了一個 if/else 判斷句，若非客製化頁面，就用平常的刪除方法，若客製化頁面，則是找到它並且刪除它
+
+```
+app.post("/delete", function (req, res) {
+  const checkedItemId = req.body.checkbox;
+  const listName = req.body.listName;
+
+  if (listName === "Today") {
+    Item.findByIdAndRemove(checkedItemId, function (err) {
+      if (!err) {
+        console.log("Successfully deleted the item");
+        res.redirect("/");
+      }
+    });
+  } else {
+    List.findOneAndUpdate(
+      { name: listName },
+      { $pull: { items: { _id: checkedItemId } } },
+      function (err, foundList) {
+        if (!err) {
+          res.redirect("/" + listName);
+        }
+      }
+    );
+  }
+});
+```
