@@ -1,5 +1,7 @@
 # EJS TODOLIST
 
+### Deploy on Heroku at 2022.6.16: https://gentle-ridge-11819.herokuapp.com
+
 和第二節中 EJS 介紹的 todolist 大同小異，只是以往用 array 來存資料，這次用 mongodb 來存
 
 - 一開始要先連接 mongodb
