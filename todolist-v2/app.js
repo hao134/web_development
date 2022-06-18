@@ -15,9 +15,7 @@ app.use(express.static("public"));
 //main().catch((err) => console.log(err));
 
 //Connects MongoDB Server and Creates DB
-mongoose.connect(
-  "mongodb+srv://hao134:test1234@cluster0.arcsdvf.mongodb.net/todolistDB"
-);
+mongoose.connect("mongodb://localhost:27017/todolistDB");
 console.log("Successfully connected to database");
 
 //Define itemsSchema
