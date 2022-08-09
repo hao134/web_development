@@ -1,5 +1,92 @@
-/*/////////////// Conditional Rendering with the Ternary & And Op ////////////*/
-* {
+/*/////////////// React Hooks - useStates Practice////////////*/
+body {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  color: #fff;
+  padding: 50px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: #374954;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.container {
+  margin: 60% auto;
+}
+
+button {
+  display: inline;
+  background-color: #6bbe92;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 5px;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+/*/ ////////////// React Hooks - useStates ////////////*/
+/* body {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  color: #fff;
+  padding: 50px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: #374954;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.container {
+  margin: 60% auto;
+}
+
+button {
+  display: inline-block;
+  background-color: #6bbe92;
+  border: 0;
+  width: 60px;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+} */
+
+/*/ ////////////// State in React ////////////*/
+/* body {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  color: #fff;
+  padding: 50px;
+  background-color: #374954;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+button {
+  background-color: #6bbe92;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 5px;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+} */
+/*/ ////////////// Conditional Rendering with the Ternary & And Op ////////////*/
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -55,7 +142,7 @@ form button {
   border-radius: 3px;
   width: 250px;
   font-size: 18px;
-}
+} */
 
 /*/ ////////////// Mapping Practice Part ////////////*/
 /* body {
