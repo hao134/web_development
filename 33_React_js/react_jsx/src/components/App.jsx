@@ -8,20 +8,26 @@ function App() {
     console.log(event.target.value);
     setName(event.target.value);
   }
-  function handleClick() {
+  function handleClick(event) {
     setHeading(name);
+
+    //form will get refresh when submit
+    // add below line to prevent this behaviour
+    event.preventDefault();
   }
 
   return (
     <div className="container">
       <h1>Hello {headingText}</h1>
-      <input
-        onChange={handleChange}
-        type="text"
-        placeholder="What's your name?"
-        value={name}
-      />
-      <button onClick={handleClick}>Submit</button>
+      <form onSubmit={handleClick}>
+        <input
+          onChange={handleChange}
+          type="text"
+          placeholder="What's your name?"
+          value={name}
+        />
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
